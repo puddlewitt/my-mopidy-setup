@@ -3,7 +3,6 @@ version: "3"
 services:
   mopidy:
     privileged: true
-    user: mopidy
     image: localhost/mopidy
     ports:
       - "6600:6600"

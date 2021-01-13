@@ -3,7 +3,7 @@ ARG BUILD_FROM=debian:buster-slim
 FROM $BUILD_FROM
 
 RUN addgroup --gid 1002 mymusic
-RUN adduser --uid 128 --gid 1002 mopidy
+RUN adduser --uid 128 --gid 1002 --gid 29 mopidy
 
 RUN apt-get update \
  && apt-get install -y wget \
