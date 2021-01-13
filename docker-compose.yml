@@ -11,7 +11,7 @@ services:
     volumes:
       - './mopidy/cache_dir/:/home/mopidy/.cache/mopidy/'
       - './mopidy/config_dir/:/home/mopidy/.config/mopidy/'
-      - './mopidy.config:/home/mopidy/.config/mopidy/mopidy.config'
+      - './mopidy.conf:/home/mopidy/.config/mopidy/mopidy.conf'
       - './mopidy/data_dir/:/home/mopidy/.local/share/mopidy/'
       - '/media/paul/Data/Paul/Music:/media/paul/Data/Paul/Music'
     restart: unless-stopped
