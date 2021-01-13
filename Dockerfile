@@ -2,6 +2,9 @@ ARG BUILD_FROM=debian:buster-slim
 
 FROM $BUILD_FROM
 
+RUN addgroup --gid 1002 mymusic
+RUN adduser --uid 128 --gid 1002 mopidy
+
 RUN apt-get update \
  && apt-get install -y wget \
                        gnupg2 \
@@ -42,11 +45,9 @@ RUN pip3 install -r requirements.txt \
 
 RUN update-ca-certificates --fresh
 
-COPY mopidy.conf /root/.config/mopidy/
-
-VOLUME ["/root/.cache/mopidy", "/root/.local/share/mopidy"]
-
 ENV TZ=Europe/London
+
+USER mopidy
 
 EXPOSE 6600 6680
 

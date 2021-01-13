@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  mopidy:
+    privileged: true
+    user: mopidy
+    image: localhost/mopidy
+    ports:
+      - "6600:6600"
+      - "6680:6680"
+    volumes:
+      - './mopidy/cache_dir/:/home/mopidy/.cache/mopidy/'
+      - './mopidy/config_dir/:/home/mopidy/.config/mopidy/'
+      - './mopidy.config:/home/mopidy/.config/mopidy/mopidy.config'
+      - './mopidy/data_dir/:/home/mopidy/.local/share/mopidy/'
+      - '/media/paul/Data/Paul/Music:/media/paul/Data/Paul/Music'
+    restart: unless-stopped
+    devices:
+      - "/dev/snd"

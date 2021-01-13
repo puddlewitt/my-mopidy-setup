@@ -5,3 +5,5 @@ Mopidy-MPD==3.1.0
 Mopidy-Podcast==3.0.0
 Mopidy-Scrobbler==2.0.1
 Mopidy-Spotify==4.1.0
+Mopidy-Local==3.2.0
+Mopidy-YouTube==3.2
