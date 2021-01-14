@@ -48,6 +48,8 @@ RUN update-ca-certificates --fresh
 
 ENV TZ=Europe/London
 
+RUN usermod -a -G messagebus mopidy
+
 USER mopidy
 
 EXPOSE 6600 6680
