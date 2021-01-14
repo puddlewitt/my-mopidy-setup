@@ -7,4 +7,4 @@ Mopidy-Scrobbler==2.0.1
 Mopidy-Spotify==4.1.0
 Mopidy-Local==3.2.0
 Mopidy-YouTube==3.2
-Mopidy-MusicBox-Webclient==3.2.0
+Mopidy-MusicBox-Webclient==3.1.0
