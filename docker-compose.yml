@@ -8,7 +8,7 @@ services:
       - "6600:6600"
       - "6680:6680"
     volumes:
-      - './mopidy/cache_dir/:/home/mopidy/.cache/mopidy/'
+      - './mopidy/cache_dir/:/home/mopidy/.cache/'
       - './mopidy/config_dir/:/home/mopidy/.config/mopidy/'
       - './mopidy.conf:/home/mopidy/.config/mopidy/mopidy.conf'
       - './mopidy/data_dir/:/home/mopidy/.local/share/mopidy/'
